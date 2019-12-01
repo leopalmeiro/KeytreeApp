@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
+import { withRouter, Redirect } from "react-router-dom";
 
 import { inject, observer } from "mobx-react";
 import Footer from "./footer";
@@ -51,4 +51,4 @@ class User extends Component {
 	}
 }
 
-export default User;
+export default withRouter(User);

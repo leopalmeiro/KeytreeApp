@@ -57,6 +57,14 @@ class UserStore {
 			this.isFetching = false;
 		}
 	}
+
+		@action logout() {
+
+			this.user = "";
+			this.orgs = [];
+			this.repo = [];
+
+	}
 }
 
 export default UserStore;
