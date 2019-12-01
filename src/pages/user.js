@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { withRouter, Redirect } from "react-router-dom";
 
 import { inject, observer } from "mobx-react";
+
+//components imports
 import Footer from "./footer";
 import Menu from "../components/menu";
 import UserInfo from "../components/userinfo";
@@ -11,10 +13,13 @@ import Repository from "../components/repository";
 @inject("UserStore")
 @observer
 class User extends Component {
+	/* Constructor Method */
 	constructor(props) {
 		super(props);
 		const { UserStore } = this.props;
 	}
+
+	/* Render Method */
 	render() {
 		const { UserStore } = this.props;
 		return (
@@ -36,20 +41,17 @@ class User extends Component {
 						</div>
 
 						<div class="row justify-content-center">
-														<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-
 							{UserStore.orgs.length > 0 && (
+								<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
 									<Organization orgs={UserStore.orgs} />
+								</div>
 							)}
-															</div>
-
-															<div class="col-sm-12 col-md-11 col-lg-6 col-xl-6">
 
 							{UserStore.repo.length > 0 && (
+								<div class="col-sm-12 col-md-11 col-lg-6 col-xl-6">
 									<Repository repo={UserStore.repo} />
-							)} 
-															</div>
-
+								</div>
+							)}
 						</div>
 					</div>
 					<div class="row">
@@ -62,9 +64,3 @@ class User extends Component {
 }
 
 export default withRouter(User);
-
-/* 							{UserStore.repo.length > 0 && (
-								<div class="col-sm-12 col-md-11 col-lg-6 col-xl-6">
-									<Repository repo={UserStore.repo} />
-								</div>
-							)} */

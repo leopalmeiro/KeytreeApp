@@ -12,8 +12,6 @@ class UserStore {
 	@action async getUser(user) {
 		this.isFetching = true;
 		this.error = null;
-		//console.log("User:" + user);
-
 		try {
 			const response = await getUserData(user);
 			this.user = response.user;
@@ -45,25 +43,20 @@ class UserStore {
 				throw new Error("User is required!");
 			}
 			const response = await this.getUser(user);
-			console.log(response);
 			if (!this.error && !this.user) {
 				throw new Error("User not found!");
 			}
 			this.getUserRep(user);
-
 		} catch (error) {
-			console.log("ererasdd===> " + error);
 			this.error = error;
 			this.isFetching = false;
 		}
 	}
 
-		@action logout() {
-
-			this.user = "";
-			this.orgs = [];
-			this.repo = [];
-
+	@action logout() {
+		this.user = "";
+		this.orgs = [];
+		this.repo = [];
 	}
 }
 

@@ -14,22 +14,30 @@ import Message from "../components/message";
 class Index extends Component {
 	state = { user: "" };
 
+	/* constructor method */
 	constructor(props) {
 		super(props);
 		const { UserStore } = this.props;
 	}
 
+	/* 
+Method for chandleChanges of components
+@input e: events
+*/
 	handleChange = e => {
 		this.setState({ user: e.target.value });
 	};
 
+	/* 
+Method for handleSend to redirect to another pages.
+@input e: events
+*/
 	handleSend = e => {
 		const { UserStore } = this.props;
-
 		UserStore.getUserInfo(this.state.user);
-
 	};
 
+	/* Render Method */
 	render() {
 		const { UserStore } = this.props;
 		return (
@@ -66,6 +74,7 @@ class Index extends Component {
 									aria-describedby="basic-addon1"
 									onChange={this.handleChange}
 									value={this.state.user}
+									data-toggle="tooltip" data-placement="top" title="Type GitHub User for find it!"
 								/>
 							</div>
 						</div>
@@ -82,7 +91,7 @@ class Index extends Component {
 											role="status"
 											aria-hidden="true"
 										></span>
-										 Loading...
+										Loading...
 									</button>
 								) : (
 									<button

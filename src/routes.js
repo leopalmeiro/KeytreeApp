@@ -6,7 +6,9 @@ import Index from "./pages/index";
 import PageNotFound from "./pages/pagenotfound";
 import User from "./pages/user";
 
-
+/* 
+	Router Method
+*/
 const Routes = () => (
 	<HashRouter>
 		<Switch>

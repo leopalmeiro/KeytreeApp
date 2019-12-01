@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 
+/* 
+Method for create footer component
+@return HTML of the component
+*/
 const Footer = () => {
 	return (
 			<div class="container">

@@ -2,6 +2,11 @@ import React, { Component } from "react";
 import Footer from "./footer";
 import NotFoundImage from "../assets/notfound.svg";
 
+/* 
+Method for create NotFound page
+@input message 
+@return HTML component
+*/
 class PageNotFound extends Component {
 	render() {
 		return (
@@ -16,9 +21,9 @@ class PageNotFound extends Component {
 								<h1>Opssss!!</h1>
 								<h1>Something wrong</h1>
 								<h1>Page not Found</h1>
-                <a class="btn btn-primary" href="/" role="button">
-								Try Again!
-							</a>
+								<a class="btn btn-primary" href="/" role="button">
+									Try Again!
+								</a>
 							</div>
 						</div>
 					</div>

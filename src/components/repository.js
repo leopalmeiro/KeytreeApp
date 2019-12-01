@@ -1,33 +1,47 @@
 import React, { Component } from "react";
 import { inject, observer } from "mobx-react";
 
+/* 
+Method for render IconLaguages
+@input language: String 
+@return HTML of the component
+*/
 const RenderIconLanguage = ({ language }) => {
 	switch (language) {
 		case "CSS":
 			return (
-				<td data-toggle="tooltip" data-placement="top" title={language}>
+				<td class="text-center" data-toggle="tooltip" data-placement="top" title={language}>
 					<i class="fa fa-css3"></i>
 				</td>
 			);
 		case "HTML":
 			return (
-				<td data-toggle="tooltip" data-placement="top" title={language}>
+				<td class="text-center" data-toggle="tooltip" data-placement="top" title={language}>
 					<i class="fa fa-html5"></i>
 				</td>
 			);
-			
+
 		default:
-			return <td data-toggle="tooltip" data-placement="top" title={language}>{language}</td>;
+			return (
+				<td class="text-center" data-toggle="tooltip" data-placement="top" title={language}>
+					{language}
+				</td>
+			);
 	}
 };
 
+/* 
+Method for fetch item of Repositories
+@input List of Repository 
+@return HTML of the component
+*/
 const ListRepo = ({ list }) => (
 	<tbody>
 		{list.map(item => (
 			<tr>
-				<td scope="row">{item.name}</td>
+				<td scope="row" data-toggle="tooltip" data-placement="top" title={item.name}>{item.name}</td>
 				<td>
-					<a href={item.html_url} target="_blank">
+					<a href={item.html_url} target="_blank" data-placement="top" title={item.html_url}>
 						{item.html_url}
 					</a>
 				</td>

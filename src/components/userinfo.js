@@ -5,9 +5,6 @@ import { inject, observer } from "mobx-react";
 class UserInfo extends Component {
 	render() {
 		const { user } = this.props;
-
-		console.log("user avatar: =>>" + JSON.stringify(user));
-
 		return (
 			<>
 				<div
@@ -28,7 +25,7 @@ class UserInfo extends Component {
 				>
 					<label class="user-name">{user.name}</label>
 				</div>
-	
+
 				<div class="user-info-box">
 					{user.company && (
 						<div

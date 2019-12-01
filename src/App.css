@@ -2,7 +2,21 @@
 	margin: 30px;
 	height: 800px;
 }
-.logo {
+.table-wrapper {
+  max-height: 300px;
+  overflow: auto;
+  display:inline-block;
+}
+.notfound-img {
+	height: 400px;
+}
+
+.organization-box{
+  margin-top: 20px;
+}
+
+/* images sections*/
+ .logo {
 	height: 200px;
 	margin-top: 10px;
 	margin-bottom: 20px;
@@ -18,38 +32,33 @@
 	height: 200px;
 	width: 200px;
 }
-
 .avatar:hover {
 	transition: ease-out 0.2s;
 	border: 2px solid #3498db;
 	-webkit-transition: ease-out 0.2s;
-}
-
-.table-wrapper {
-  max-height: 300px;
-  overflow: auto;
-  display:inline-block;
 }
 .avatar-box {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
+
+/* user section */
 .user-info-box {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 }
-.organization-box{
-  margin-top: 20px;
-}
 .user-info-row {
 	margin-left: 15px;
 }
+
 .user-name{
   font-size: 35px;
 }
+
+/* icons section */
 .icon {
 	line-height: 0; /* remove line-height */
 	display: inline-block; /* circle wraps image */
@@ -70,9 +79,7 @@
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
-.notfound-img {
-	height: 400px;
-}
+
 
 .icon-social-media {
 	font-size: 30px;

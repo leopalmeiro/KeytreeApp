@@ -2,13 +2,15 @@ import React, { Component } from "react";
 import NotFoundImage from "../assets/notfound.svg";
 import { inject, observer } from "mobx-react";
 
-
-
-
-	const ListOrg = ({ list }) => (
-		<>
-			{list.map(item => (
-				<a href={`https://github.com/${item.login}`} target="_blank">
+/* 
+Method for fetch item of Organizations
+@input List of Organization 
+@return HTML of the component
+*/
+const ListOrg = ({ list }) => (
+	<>
+		{list.map(item => (
+			<a href={`https://github.com/${item.login}`} target="_blank">
 				<img
 					data-toggle="tooltip"
 					data-placement="top"
@@ -16,15 +18,13 @@ import { inject, observer } from "mobx-react";
 					class="icon"
 					src={item.avatar_url}
 				/>
-				</a>
-			))}
-		</>
-	);
+			</a>
+		))}
+	</>
+);
 
 @observer
 class Organization extends Component {
-
-
 	render = () => {
 		const { orgs } = this.props;
 		return (
