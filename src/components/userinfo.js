@@ -21,7 +21,7 @@ class UserInfo extends Component {
 					class="user-info-box"
 					data-toggle="tooltip"
 					data-placement="top"
-					title="User Name"
+					title={`Name: ${user.name}`}
 				>
 					<label class="user-name">{user.name}</label>
 				</div>
@@ -32,7 +32,7 @@ class UserInfo extends Component {
 							class="user-info-row"
 							data-toggle="tooltip"
 							data-placement="top"
-							title="Company"
+							title={`Company: ${user.company}`}
 						>
 							<a href="#">
 								<i class="fa fa-briefcase no-link" aria-hidden="true"></i>{" "}
@@ -45,7 +45,7 @@ class UserInfo extends Component {
 							class="user-info-row"
 							data-toggle="tooltip"
 							data-placement="top"
-							title="Location"
+							title={`Location: ${user.location}`}
 						>
 							<a href="">
 								<i class="fa fa-map-marker no-link" aria-hidden="true"></i>
@@ -58,7 +58,7 @@ class UserInfo extends Component {
 							class="user-info-row"
 							data-toggle="tooltip"
 							data-placement="top"
-							title="Email"
+							title={`Email: ${user.email}`}
 						>
 							<a href={"mailto:" + user.email}>
 								<i class="fa fa-envelope " aria-hidden="true"></i>
@@ -71,7 +71,7 @@ class UserInfo extends Component {
 							class="user-info-row"
 							data-toggle="tooltip"
 							data-placement="top"
-							title="Blog"
+							title={`Blog: ${user.blog}`}
 						>
 							<a href={user.blog} target="_blank">
 								<i class="fa fa-globe" aria-hidden="true"></i>

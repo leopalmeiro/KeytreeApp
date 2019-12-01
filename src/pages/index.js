@@ -69,8 +69,8 @@ Method for handleSend to redirect to another pages.
 							<div class="input-box">
 								<input
 									class="form-control"
-									placeholder="Username"
-									aria-label="Username"
+									placeholder="Type GitHub User"
+									aria-label="Type GitHub User"
 									aria-describedby="basic-addon1"
 									onChange={this.handleChange}
 									value={this.state.user}
