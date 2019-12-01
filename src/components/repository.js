@@ -10,20 +10,35 @@ const RenderIconLanguage = ({ language }) => {
 	switch (language) {
 		case "CSS":
 			return (
-				<td class="text-center" data-toggle="tooltip" data-placement="top" title={language}>
+				<td
+					class="text-center"
+					data-toggle="tooltip"
+					data-placement="top"
+					title={language}
+				>
 					<i class="fa fa-css3"></i>
 				</td>
 			);
 		case "HTML":
 			return (
-				<td class="text-center" data-toggle="tooltip" data-placement="top" title={language}>
+				<td
+					class="text-center"
+					data-toggle="tooltip"
+					data-placement="top"
+					title={language}
+				>
 					<i class="fa fa-html5"></i>
 				</td>
 			);
 
 		default:
 			return (
-				<td class="text-center" data-toggle="tooltip" data-placement="top" title={language}>
+				<td
+					class="text-center"
+					data-toggle="tooltip"
+					data-placement="top"
+					title={language}
+				>
 					{language}
 				</td>
 			);
@@ -39,9 +54,21 @@ const ListRepo = ({ list }) => (
 	<tbody>
 		{list.map(item => (
 			<tr>
-				<td scope="row" data-toggle="tooltip" data-placement="top" title={item.name}>{item.name}</td>
+				<td
+					scope="row"
+					data-toggle="tooltip"
+					data-placement="top"
+					title={item.name}
+				>
+					{item.name}
+				</td>
 				<td>
-					<a href={item.html_url} target="_blank" data-placement="top" title={item.html_url}>
+					<a
+						href={item.html_url}
+						target="_blank"
+						data-placement="top"
+						title={item.html_url}
+					>
 						{item.html_url}
 					</a>
 				</td>
@@ -60,7 +87,7 @@ class Repository extends Component {
 				<div class="organization-box">
 					<h3 class="text-center">Repositories</h3>
 					<div class="table-wrapper">
-						<table class="table table-striped table-hover ">
+						<table data-spy="scroll" class="table table-striped table-inverse table-responsive table-hover">
 							<thead class="thead-inverse">
 								<tr>
 									<th>Repository</th>
@@ -70,7 +97,7 @@ class Repository extends Component {
 							</thead>
 							<ListRepo list={repo} />
 						</table>
-					</div>
+						</div>
 				</div>
 			</>
 		);
@@ -78,3 +105,24 @@ class Repository extends Component {
 }
 
 export default Repository;
+/* 			<table class="table table-striped table-inverse table-responsive table-hover">
+				<thead class="thead-inverse">
+					<tr>
+						<th>ddsaads</th>
+						<th>dads</th>
+						<th>dsdsa</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td scope="row">ddsadsdsdasddads</td>
+							<td>das</td>
+							<td>dasds</td>
+						</tr>
+						<tr>
+							<td scope="row">dadsadadadsd</td>
+							<td>das</td>
+							<td>dasd</td>
+						</tr>
+					</tbody>
+			</table> */

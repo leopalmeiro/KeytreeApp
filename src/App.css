@@ -3,9 +3,10 @@
 	height: 800px;
 }
 .table-wrapper {
-  max-height: 300px;
-  overflow: auto;
-  display:inline-block;
+  display:block;
+  overflow:auto;
+  height:200px;
+  width:100%;
 }
 .notfound-img {
 	height: 400px;
@@ -129,7 +130,7 @@
 	}
 
 	.icon-social-media {
-		font-size: 80px;
+		font-size: 50px;
 	}
 	.content {
 		height: auto;
@@ -141,11 +142,15 @@
 		grid-template-columns: repeat(1, 1fr);
 	}
 	.icon-social-media {
-		font-size: 100px;
+		font-size: 50px;
 	}
 	.content {
 		height: auto;
 	}
+	.logo{
+		height: 100px;
+	}
+
 }
 @media (max-width: 767px) {
 	.content {

@@ -46,7 +46,10 @@ Method for handleSend to redirect to another pages.
 				<div class="container">
 					<div class="content">
 						<div class="row justify-content-center">
-							<img class="logo" src={Logo} alt="logo" />
+						<div class="col-xs-1-12">
+														<img class="logo" src={Logo} alt="logo" />
+
+						</div>
 						</div>
 
 						<div class="row justify-content-center">
