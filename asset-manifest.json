@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/KeytreeApp/static/css/main.a3f15a62.chunk.css",
+    "main.js": "/KeytreeApp/static/js/main.7d968c66.chunk.js",
+    "main.js.map": "/KeytreeApp/static/js/main.7d968c66.chunk.js.map",
+    "runtime-main.js": "/KeytreeApp/static/js/runtime-main.26218d39.js",
+    "runtime-main.js.map": "/KeytreeApp/static/js/runtime-main.26218d39.js.map",
+    "static/css/2.327aea02.chunk.css": "/KeytreeApp/static/css/2.327aea02.chunk.css",
+    "static/js/2.4aa6992d.chunk.js": "/KeytreeApp/static/js/2.4aa6992d.chunk.js",
+    "static/js/2.4aa6992d.chunk.js.map": "/KeytreeApp/static/js/2.4aa6992d.chunk.js.map",
+    "index.html": "/KeytreeApp/index.html",
+    "precache-manifest.7d4aae7320c5baf3a470e97e19aed381.js": "/KeytreeApp/precache-manifest.7d4aae7320c5baf3a470e97e19aed381.js",
+    "service-worker.js": "/KeytreeApp/service-worker.js",
+    "static/css/2.327aea02.chunk.css.map": "/KeytreeApp/static/css/2.327aea02.chunk.css.map",
+    "static/css/main.a3f15a62.chunk.css.map": "/KeytreeApp/static/css/main.a3f15a62.chunk.css.map",
+    "static/media/font-awesome.css": "/KeytreeApp/static/media/fontawesome-webfont.fee66e71.woff",
+    "static/media/notfound.svg": "/KeytreeApp/static/media/notfound.e9cf698f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.26218d39.js",
+    "static/css/2.327aea02.chunk.css",
+    "static/js/2.4aa6992d.chunk.js",
+    "static/css/main.a3f15a62.chunk.css",
+    "static/js/main.7d968c66.chunk.js"
+  ]
+}
