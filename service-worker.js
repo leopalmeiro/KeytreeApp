@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/KeytreeApp/precache-manifest.4d891ed4adf94ff293df9216899ce416.js"
+  "/KeytreeApp/precache-manifest.dc94c1394c1af8e724fa2afa1a79d44d.js"
 );
 
 self.addEventListener('message', (event) => {
