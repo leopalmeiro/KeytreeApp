@@ -19,29 +19,37 @@ class User extends Component {
 		const { UserStore } = this.props;
 		return (
 			<>
-							{!UserStore.user && <Redirect to="/" />}
+				{!UserStore.user && <Redirect to="/" />}
 
 				<div class="container">
 					<div class="content">
-						<Menu />
+					<div class="row">
+												<div class="col-12">
+
+												<Menu />
+												</div>
+					</div>
+
 						<div class="row justify-content-center">
 							<div class="col-12">
 								<UserInfo user={UserStore.user} />
 							</div>
 						</div>
+
 						<div class="row justify-content-center">
 							{UserStore.orgs.length > 0 && (
-								<div class="col-6">
+								<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
 									<Organization orgs={UserStore.orgs} />
 								</div>
 							)}
-							{UserStore.repo.length > 0  && (
-								<div class="col-6">
+							{UserStore.repo.length > 0 && (
+								<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
 									<Repository repo={UserStore.repo} />
 								</div>
 							)}
 						</div>
 					</div>
+
 					<div class="row">
 						<Footer />
 					</div>

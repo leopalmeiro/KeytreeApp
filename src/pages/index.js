@@ -101,7 +101,6 @@ class Index extends Component {
 						<Footer />
 					</div>
 				</div>
-				{/* end of container div */}
 			</>
 		);
 	}
