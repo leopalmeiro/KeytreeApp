@@ -124,6 +124,9 @@
 	.icon-social-media {
 		font-size: 80px;
 	}
+	.content {
+		height: auto;
+	}
 }
 
 @media (max-width: 400px) {
@@ -132,5 +135,8 @@
 	}
 	.icon-social-media {
 		font-size: 100px;
+	}
+	.content {
+		height: auto;
 	}
 }
