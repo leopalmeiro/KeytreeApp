@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
+
 import { inject, observer } from "mobx-react";
 import Footer from "./footer";
 import Menu from "../components/menu";
@@ -17,6 +19,8 @@ class User extends Component {
 		const { UserStore } = this.props;
 		return (
 			<>
+							{!UserStore.user && <Redirect to="/" />}
+
 				<div class="container">
 					<div class="content">
 						<Menu />

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter, Redirect } from "react-router-dom";
 import { inject, observer } from "mobx-react";
 
 import Footer from "./footer";
@@ -17,8 +17,6 @@ class Index extends Component {
 	constructor(props) {
 		super(props);
 		const { UserStore } = this.props;
-		//UserStore.getUserInfo("leo");
-		//UserStore.getUser("leo");
 	}
 
 	handleChange = e => {
@@ -29,20 +27,14 @@ class Index extends Component {
 		const { UserStore } = this.props;
 
 		UserStore.getUserInfo(this.state.user);
-		if (UserStore.user) {
-			this.props.history.push("/user");
-		}
+
 	};
 
 	render() {
 		const { UserStore } = this.props;
-		console.log("user:" + JSON.stringify(UserStore.user));
-/* 		if (UserStore.redirect) {
-      return <Redirect to='/dashboard' />
-    } */
 		return (
 			<>
-			 	
+				{UserStore.user && <Redirect to="/user" />}
 				<div class="container">
 					<div class="content">
 						<div class="row justify-content-center">
@@ -79,13 +71,28 @@ class Index extends Component {
 						</div>
 						<div class="row justify-content-center">
 							<div class="input-box">
-								<button
-									type="button"
-									class="btn btn-primary btn-lg btn-block"
-									onClick={this.handleSend}
-								>
-									Search
-								</button>
+								{UserStore.isFetching ? (
+									<button
+										class="btn btn-primary btn-lg btn-block"
+										type="button"
+										disabled
+									>
+										<span
+											class="spinner-border spinner-border-sm"
+											role="status"
+											aria-hidden="true"
+										></span>
+										 Loading...
+									</button>
+								) : (
+									<button
+										type="button"
+										class="btn btn-primary btn-lg btn-block"
+										onClick={this.handleSend}
+									>
+										Search
+									</button>
+								)}
 							</div>
 						</div>
 					</div>

@@ -5,7 +5,6 @@ import { getRepos, getUserData } from "../services/githubapi";
 class UserStore {
 	@observable error = null;
 	@observable isFetching = false;
-	@observable redirect = false;
 	@observable user = "";
 	@observable orgs = [];
 	@observable repo = [];
@@ -45,13 +44,15 @@ class UserStore {
 			if (!user) {
 				throw new Error("User is required!");
 			}
-			this.getUser(user);
-			if (!this.user) {
+			const response = await this.getUser(user);
+			console.log(response);
+			if (!this.error && !this.user) {
 				throw new Error("User not found!");
 			}
 			this.getUserRep(user);
 
 		} catch (error) {
+			console.log("ererasdd===> " + error);
 			this.error = error;
 			this.isFetching = false;
 		}
